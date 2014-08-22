@@ -12,6 +12,8 @@ class RecipeController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @ingredients = Ingredient.all
+    @users = User.all
     render('recipes/new.html.erb')
   end
 

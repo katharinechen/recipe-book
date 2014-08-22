@@ -1,0 +1,27 @@
+<h1>Create New Portion </h1>
+
+<%= render('layouts/errors', :object => @portion) %>
+
+<form action="/portions/create" method="post">
+  <label for="recipe_name">Recipe</label>
+  <select name="select">
+    <% @recipes.each do |recipe| %>
+      <option value="<%= recipe.id %>"><%= recipe.name %></option>
+    <% end %>
+  </select>
+  <label for="ingredient_name">Recipe</label>
+  <select name="select">
+    <% @ingredients.each do |ingredient| %>
+      <option value="<%= ingredient.id %>"><%= ingredient.name %></option>
+    <% end %>
+  </select>
+  <label for="quantity">Quantity</label>
+  <input id="quantity" name="portion[quantity]" type="text" value="<%= @portion.quantity %>">
+  <label for="unit_of_measurement">Unit of Measurement </label>
+  <input id="unit_of_measurement" name="portion[user_of_measurement]" type="text" value="<%= @portion.unit_of_measurement%>">
+</form>
+
+<%= render('layouts/navbar') %>
+
+
+

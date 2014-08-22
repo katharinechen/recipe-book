@@ -8,9 +8,20 @@
   <br />
   <hr />
   <h3>Ingredients</h3>
-  <!-- ingredient list drop-down, then an amount number box, the a drop-down for units (oz, grams, etc),
-        then an add button, then a select box (allow multiple selection) with a remove button to
-          remove an ingredient/portion after it's been added -->
+
+  <form action="/portions/create" method="post">
+    <label for="ingredient_name">Recipe</label>
+    <select name="portion[ingredient_id]">
+      <% @ingredients.each do |ingredient| %>
+        <option value="<%= ingredient.id %>"><%= ingredient.name %></option>
+      <% end %>
+    </select>
+    <label for="quantity">Quantity</label>
+    <input id="quantity" name="portion[quantity]" type="number" value="<%= @portion.quantity %>">
+    <label for="unit_of_measurement">Unit of Measurement </label>
+    <input id="unit_of_measurement" name="portion[unit_of_measurement]" type="text" value="<%= @portion.unit_of_measurement%>">
+  </form>
+
   <hr />
   <h3>Directions</h3>
   <label for="recipe_content">Recipe Content </label>
