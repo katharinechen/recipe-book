@@ -1,0 +1,13 @@
+<h1>Create New Recipe</h1>
+
+<%= render('layouts/errors', :object => @recipe) %>
+
+<form action="/recipes/create" method="post">
+  <label for="recipe_name">Recipe Name </label>
+  <input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
+
+  <label for="recipe_content">Recipe Content </label>
+  <textarea id="recipe_content" name="recipe[content]" type="textarea" value="<%= @recipe.content %>">Enter your instructions here </textarea>
+
+  <button>Create Recipe</button>
+</form>

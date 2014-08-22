@@ -15,4 +15,11 @@ Rails.application.routes.draw do
   match('/ingredients/create', :via => :post, :to => 'ingredient#create')
   match('/ingredients/:id/edit', :via => :get, :to => 'ingredient#edit')
   match('/ingredients/:id', :via => [:patch, :put], :to => 'ingredient#update')
+
+  match('/recipes', :via => :get, :to => 'recipe#show_all')
+  match('/recipes/new', :via => :get, :to => 'recipe#new')
+  match('/recipes/:id', :via => :get, :to => 'recipe#show')
+  match('/recipes/create', :via => :post, :to => 'recipe#create')
+  match('/recipes/:id/edit', :via => :get, :to => 'recipe#edit')
+  match('/recipes/:id', :via => [:patch, :put], :to => 'recipe#update')
 end

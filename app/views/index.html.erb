@@ -21,5 +21,13 @@
   <% end %>
 </ul>
 
+<hr />
 
+<p><a href="/recipe/new">Create New Recipes</a></p>
+<h2>Recipe List</h2>
+<ul>
+  <% Recipe.all.each do |recipe| %>
+  <li><a href="/recipes/<%= recipe.id %>"><%= recipe.id %></a></li>
+  <% end %>
+</ul>
 
