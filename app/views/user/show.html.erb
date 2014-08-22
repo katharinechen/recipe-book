@@ -3,4 +3,6 @@
 
 <p>Eventually this page will display all of a user's recipes and reviews. But right now, just their name. This user has been lazy.</p>
 
-<%= render('layouts/navbar', :object => @lesson) %>
+<p><a href="/user/<%= @user.id %>/edit">Edit User</a></p>
+<p><a href="/user/<%= @user.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete User</a></p>
+<%= render('layouts/navbar', :object => @lesson) %>>

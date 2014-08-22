@@ -20,4 +20,26 @@ class UserController < ApplicationController
     render('user/show.html.erb')
   end
 
+  def edit
+    @user = User.find(params[:id])
+    render('/user/edit.html.erb')
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update(params[:user])
+      redirect_to("/user/#{@user.id}")
+    else
+      render('/user/edit.html.erb')
+    end
+  end
+
+  def delete
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to('/')
+  end
+
 end

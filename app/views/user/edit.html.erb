@@ -1,0 +1,15 @@
+<h1><%= @user.name %></h1>
+
+<%= render('layouts/errors', :object => @user) %>
+
+
+<p>Please change the information you like to edit:</p>
+
+<form action="/user/<%= @user.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="name">User Name: </label>
+  <input id="name" type="text" name="user[name]" class="form-control" value="<%=@user.name%>">
+  <button>Update User</button>
+</form>
+
+
