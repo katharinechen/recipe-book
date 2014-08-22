@@ -28,32 +28,11 @@
 
 
 
-
-
-
-
-table user
-  name :string
-
-table recipes
-  name :string
-  average_star :number
-  content :text
-
 table portion
   ingredient_id
   quantity
   recipes_id
 
-table ingredients
-  name
-
-table tags
-  name
-
-join-table (contributor-recipes)
-  user_id
-  recipe_id
 
 reviews
   star :integer
