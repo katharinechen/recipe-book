@@ -1,0 +1,13 @@
+
+<h1>Create New Ingredient</h1>
+
+<%= render('layouts/errors', :object => @ingredient) %>
+
+
+<form action="/ingredients/create" method="post">
+  <label for="ingredient_name">Ingredient Name</label>
+  <input id="ingredient_name" name="ingredient[name]" type="text" value="<%= @ingredient.name %>">
+  <button>CREATE</button>
+</form>
+
+<%= render('layouts/navbar') %>

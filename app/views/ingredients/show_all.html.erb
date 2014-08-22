@@ -1,0 +1,11 @@
+<h1>List of all Ingredients</h1>
+
+
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li><%= ingredient.name %></li>
+  <% end %>
+</ul>
+
+<%= render('layouts/navbar') %>
+
