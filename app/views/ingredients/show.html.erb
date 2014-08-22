@@ -6,6 +6,7 @@
   <% # loop through all recipes using this ingredient here and put them in <li>s %>
 </ul>
 
-
+<p><a href="/ingredients/<%= @ingredient.id %>/edit">Edit Ingredient</a></p>
+<p><a href="/ingredients/<%= @ingredient.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Ingredient</a></p>
 
 <%= render('/layouts/navbar') %>

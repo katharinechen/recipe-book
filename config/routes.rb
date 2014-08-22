@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   match('/ingredients/create', :via => :post, :to => 'ingredient#create')
   match('/ingredients/:id/edit', :via => :get, :to => 'ingredient#edit')
   match('/ingredients/:id', :via => [:patch, :put], :to => 'ingredient#update')
+  match('/ingredients/:id/delete', :via => :delete, :to => 'ingredient#delete')
 
   match('/recipes', :via => :get, :to => 'recipe#show_all')
   match('/recipes/new', :via => :get, :to => 'recipe#new')
@@ -22,4 +23,5 @@ Rails.application.routes.draw do
   match('/recipes/create', :via => :post, :to => 'recipe#create')
   match('/recipes/:id/edit', :via => :get, :to => 'recipe#edit')
   match('/recipes/:id', :via => [:patch, :put], :to => 'recipe#update')
+  match('/recipes/:id/delete', :via => :delete, :to => 'recipe#delete')
 end

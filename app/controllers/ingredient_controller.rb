@@ -35,7 +35,7 @@ class IngredientController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
 
     if @ingredient.update(params[:ingredient])
-      redirect_to('/ingredients/#{@ingredient.id}')
+      redirect_to("/ingredients/#{@ingredient.id}")
     else
       render('ingredients/edit.html.erb')
     end

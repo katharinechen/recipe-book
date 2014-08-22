@@ -5,9 +5,19 @@
 <form action="/recipes/create" method="post">
   <label for="recipe_name">Recipe Name </label>
   <input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
-
+  <br />
+  <hr />
+  <h3>Ingredients</h3>
+  <!-- ingredient list drop-down, then an amount number box, the a drop-down for units (oz, grams, etc),
+        then an add button, then a select box (allow multiple selection) with a remove button to
+          remove an ingredient/portion after it's been added -->
+  <hr />
+  <h3>Directions</h3>
   <label for="recipe_content">Recipe Content </label>
-  <textarea id="recipe_content" name="recipe[content]" type="textarea" value="<%= @recipe.content %>">Enter your instructions here </textarea>
-
+  <textarea id="recipe_content" name="recipe[content]" type="textarea" rows="12" cols="60" value="<%= @recipe.content %>">Enter your instructions here </textarea>
+  <br />
   <button>Create Recipe</button>
 </form>
+
+
+<%= render('layouts/navbar') %>

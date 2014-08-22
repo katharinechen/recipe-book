@@ -7,5 +7,6 @@
 </ul>
 
 
-
+<p><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p>
+<p><a href="/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p>
 <%= render('/layouts/navbar') %>
