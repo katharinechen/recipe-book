@@ -24,4 +24,12 @@ Rails.application.routes.draw do
   match('/recipes/:id/edit', :via => :get, :to => 'recipe#edit')
   match('/recipes/:id', :via => [:patch, :put], :to => 'recipe#update')
   match('/recipes/:id/delete', :via => :delete, :to => 'recipe#delete')
+
+  match('/portions', :via => :get, :to => 'portion#show_all')
+  match('/portions/new', :via => :get, :to => 'portion#new')
+  match('/portions/:id', :via => :get, :to => 'portion#show')
+  match('/portions/create', :via => :post, :to => 'portion#create')
+  match('/portions/:id/edit', :via => :get, :to => 'portion#edit')
+  match('/portions/:id', :via => [:patch, :put], :to => 'portion#update')
+  match('/portions/:id/delete', :via => :delete, :to => 'portion#delete')
 end
