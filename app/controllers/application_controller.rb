@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
   def index
+    @users = User.all
     render('/index.html.erb')
   end
 end
