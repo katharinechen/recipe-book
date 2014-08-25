@@ -1,7 +1,6 @@
-<h1><%= @user.name %></h1>
-
-<%= render('layouts/errors', :object => @user) %>
-
+<% content_for(:title, "#{@user.name} | Edit | Recipe Book") %>
+<% content_for(:heading, "@user.name") %>
+<% content_for(:content, "Wrong information? Fix it.") %>
 
 <p>Please change the information you like to edit:</p>
 

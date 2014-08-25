@@ -1,16 +1,15 @@
-<!-- navbar  -->
-<%= render('layouts/navbar') %>
+<% content_for(:title, " Home | Recipe Book") %>
 
 <!-- header -->
 <div class="jumbotron">
-	<div class="container"> 
+	<div class="container">
 		<h1>Recipe Book</h1>
-		<p>A website for you to add and rate recipes</p> 
+		<p>A website for you to add and rate recipes</p>
 		<p>
 			<a class="btn btn-primary btn-lg" role="button" href="/recipes"> View Recipes</a>
 		</p>
-	</div> 
-</div> 
+	</div>
+</div>
 
 <!-- Three sections  -->
 <div class="container">
@@ -31,7 +30,7 @@
 			<p class="btn btn-danger" href="#" role="button">Search Now</p>
 		</div>
 	</div>
-	<hr> 
+	<hr>
 	<footer>
 		<p>Katharine Chen | Epicodus Rails Assessment</p>
 	</footer>

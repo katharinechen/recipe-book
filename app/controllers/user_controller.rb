@@ -9,6 +9,7 @@ class UserController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
+      flash[:alert] = "#{@user.name} was added to Recipe Book. Thank you."
       redirect_to("/user/#{@user.id}")
     else
       render('/user/new.html.erb')
@@ -29,6 +30,7 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(params[:user])
+      flash[:alert] = "Information for #{@user.name} was updated. Thank you."
       redirect_to("/user/#{@user.id}")
     else
       render('/user/edit.html.erb')
@@ -38,8 +40,13 @@ class UserController < ApplicationController
   def delete
     @user = User.find(params[:id])
     @user.destroy
-
+    flash[:notice] = "#{@user.name} has been deleted. Thank you."
     redirect_to('/')
+  end
+
+  def list
+    @users = User.all
+    render('/user/all.html.erb')
   end
 
 end

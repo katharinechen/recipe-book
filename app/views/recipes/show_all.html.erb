@@ -1,8 +1,12 @@
 
 <%= render('layouts/navbar') %>
 
-<h1>List of all Recipes</h1>
-
+<div class="jumbotron">
+  <div class="container">
+    <h1>Recipe List</h1>
+    <p>A website for you to add and rate recipes</p>
+  </div>
+</div>
 
 <ul>
   <% @recipes.each do |recipe| %>

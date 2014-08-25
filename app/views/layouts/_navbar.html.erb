@@ -9,17 +9,52 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Recipe Book</a>
+      <a class="navbar-brand" href="/">Recipe Book</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">Ingredients</a></li>
-        <li><a href="#">Ratings</a></li>
-        <li><a href="#">Queries</a></li>
+       <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/user/new">User Signup</a></li>
+            <li><a href="/user/all">Find Users</a></li>
+          </ul>
+        </li>
+
+       <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recipes<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/recipes/new">Create New Recipe</a></li>
+            <li><a href="#">Find Recipe</a></li>
+          </ul>
+        </li>
+
+       <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ingredients <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="ingredients/new">Create New Ingredient</a></li>
+            <li><a href="#">Find Ingredient</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rating <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Create New Rating</a></li>
+            <li><a href="#">Find Rating</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Queries <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Create New Ingredient</a></li>
+            <li><a href="#">Find Ingredient</a></li>
+          </ul>
+        </li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Contact</a></li>
