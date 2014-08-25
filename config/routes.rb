@@ -26,3 +26,6 @@ Rails.application.routes.draw do
   match('/recipes/:id/delete', :via => :delete, :to => 'recipe#delete')
 
 end
+
+
+

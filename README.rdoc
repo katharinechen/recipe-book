@@ -39,3 +39,27 @@ reviews
   user_id
   content :string
   recipie_id
+
+Notes: 
+
+Pages: 
+
+-Home Page 
+-Add New Recipe Form Page 
+-Each Recipe should have a page 
+-Rate Recipe page 
+-Query Page 
+	-List all recipes
+	-List all ingredients
+	-List all tags
+
+
+
+HOME PAGE 
+-view recipes(in header)
+-3 columns 
+	-add new recipe 
+	-rate recipes (Are you a cook? Click here to rate recipes?)
+	-find recipe by ingredient  
+
+ 

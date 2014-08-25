@@ -1,33 +1,34 @@
-<h1>&#xa1;&#xa1;&#xa1;Recipe Book!!!</h1>
 
 
-<p><a href="/user/new">Create New User</a></p>
-<h2>User List</h2>
+<!-- header -->
+<div class="jumbotron">
+	<div class="container"> 
+		<h1>Recipe Book</h1>
+		<p>A website for you add and rate recipes</p> 
+		<p>
+			<a class="btn btn-primary btn-lg" role="button"> View Recipes</a>
+		</p>
+	</div> 
+</div> 
 
-
-<ul>
-  <% @users.each do |user| %>
-    <li><a href="/user/<%= user.id %>"><%= user.name %></a></li>
-  <% end %>
-</ul>
-
-<hr />
-
-<p><a href="/ingredients/new">Create New Ingredient</a></p>
-<h2>Ingredient List</h2>
-<ul>
-  <% Ingredient.all.each do |ingredient| %>
-    <li><a href="/ingredients/<%= ingredient.id %>"><%= ingredient.name %></a></li>
-  <% end %>
-</ul>
-
-<hr />
-
-<p><a href="/recipes/new">Create New Recipe</a></p>
-<h2>Recipe List</h2>
-<ul>
-  <% Recipe.all.each do |recipe| %>
-  <li><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></li>
-  <% end %>
-</ul>
+<!-- Three sections  -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h2>Add New Recipe</h2>
+			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			<p class="btn btn-default" href="#" role="button">Click Here</p>
+		</div>
+		<div class="col-md-4">
+			<h2>Add New Recipe</h2>
+			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			<p class="btn btn-default" href="#" role="button">Click Here</p>
+		</div>
+		<div class="col-md-4">
+			<h2>Add New Recipe</h2>
+			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			<p class="btn btn-default" href="#" role="button">Click Here</p>
+		</div>
+	</div>
+</div>
 
