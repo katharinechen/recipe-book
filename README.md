@@ -28,3 +28,24 @@
 -fix double jumbo banner on home page
 
 
+##GOAL:
+
+-Create New Recipe
+
+<!--   <h3>Ingredients</h3>
+
+  <form action="/portions/create" method="post">
+    <label for="ingredient_name">Recipe</label>
+    <select name="portion[ingredient_id]">
+      <% @ingredients.each do |ingredient| %>
+        <option value="<%= ingredient.id %>"><%= ingredient.name %></option>
+      <% end %>
+    </select>
+    <label for="quantity">Quantity</label>
+    <input id="quantity" name="portion[quantity]" type="number" value="<%= @portion.quantity %>">
+    <label for="unit_of_measurement">Unit of Measurement </label>
+    <input id="unit_of_measurement" name="portion[unit_of_measurement]" type="text" value="<%= @portion.unit_of_measurement%>">
+  </form>
+
+
+accepts nested attributes  (for results)

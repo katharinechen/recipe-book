@@ -1,0 +1,12 @@
+<% content_for(:title, "Recipe List | Recipe Book") %>
+<% content_for(:heading, "Recipe List") %>
+<% content_for(:content, "A complete list of all of the recipes on the website") %>
+
+<p> Here is a list of all of the recipes: </p>
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li><%= recipe.name %></li>
+  <% end %>
+</ul>
+
+

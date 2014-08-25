@@ -9,7 +9,11 @@
 <body>
 
 <%= render('layouts/navbar') %>
-<%= render('layouts/jumbo') %>
+
+<% unless (yield(:heading) == "true") %>
+  <%= render('layouts/jumbo') %>
+<% end %>
+
 <%= flash[:alert] %>
 <%= flash[:notice] %>
 
@@ -17,3 +21,5 @@
 
 </body>
 </html>
+
+

@@ -7,7 +7,7 @@ class RecipeController < ApplicationController
 
   def show_all
     @recipes = Recipe.all
-    render('recipes/show_all.html.erb')
+    render('recipes/all.html.erb')
   end
 
   def new
