@@ -19,6 +19,8 @@ class UserController < ApplicationController
   def show
     @user = User.find(params[:id])
     render('user/show.html.erb')
+
+    @user_recipes = Recipe.find_by(user_id: @user.id)
   end
 
   def edit

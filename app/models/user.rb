@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
+
   validates :name, presence: true
 
   has_many :recipes
-  validates_associated :recipes
+  validates_associated :recipes 
+
 end
