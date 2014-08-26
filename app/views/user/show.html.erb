@@ -1,6 +1,6 @@
 <% content_for(:title, "New contact | Recipe Book") %>
 <% content_for(:heading, "#{@user.name}") %>
-<% content_for(:content, "Eventually this page will display all of a user's recipes and reviews. But right now, just their name because this user has been lazy.") %>
+<% content_for(:content, "#{@user.name} became a member of Recipe Book at #{@user.created_at}.") %>
 
 <div class="container">
 	<div>
@@ -13,14 +13,18 @@
 			<% end %>
 		<% end %>   
 	</div>	
-<!-- 	<div>
-		<h2><%=@user.name%>'s Reviews</h2>
-	</div> -->
+</br> 
+		<p><a href="/user/<%= @user.id %>/edit">Edit User</a></p>
+	<div>
+	</div>
+		<p><a href="/user/<%= @user.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete User</a></p>
+	<div>
+	</div>
 </div>
 
 
-<p><a href="/user/<%= @user.id %>/edit">Edit User</a></p>
-<p><a href="/user/<%= @user.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete User</a></p>
+
+
 
 
 

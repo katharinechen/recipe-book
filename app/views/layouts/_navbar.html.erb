@@ -15,49 +15,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/user/new">User Signup</a></li>
-            <li><a href="/user/all">Find Users</a></li>
-          </ul>
-        </li>
 
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recipes<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/recipes/new">Create New Recipe</a></li>
-            <li><a href="/recipes">Find Recipe</a></li>
-          </ul>
-        </li>
-
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ingredients <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="ingredients/new">Create New Ingredient</a></li>
-            <li><a href="#">Find Ingredient</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rating <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Create New Rating</a></li>
-            <li><a href="#">Find Rating</a></li>
-          </ul>
-        </li>
+        <li class="active"><a href="/recipes">Recipe List</a></li>
+        <li><a href="/recipes/new">Create New Recipe</a></li>
+        <li><a href="#">Rate Recipes</a></li> 
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Queries <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Create New Ingredient</a></li>
-            <li><a href="#">Find Ingredient</a></li>
+            <li><a href="/user/all">Find by Users</a></li>
+            <li><a href="#">Find by Ingredient</a></li>
+            <li><a href="#">Find by Ratings</a></li> 
           </ul>
         </li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Contact</a></li>
+        <li><a href="/user/new">User Signup</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
