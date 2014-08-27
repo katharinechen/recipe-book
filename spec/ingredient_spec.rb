@@ -8,4 +8,15 @@ describe Ingredient do
   	new_ingredient = Ingredient.create(name: "Pepper")
   	expect(Ingredient.all).to eq [new_ingredient, new_ingredient1]
   end 
+
+  it "should list all of the recipes that has ingredients through portions" do 
+  	new_ingredient = Ingredient.create(name: "Pasta")
+  	new_ingredient1 = Ingredient.create(name: "Cheese")
+  	user = User.create(name: "Bob Miller")
+  	recipe_test = Recipe.create(name: "Mac & Cheese", content: "Cook it", user_id: "#{user.id}")
+  	new_portion1 = Portion.create(ingredient_id: "#{new_ingredient.id}", quantity: 1, unit_of_measurement: "g", recipe_id: "#{recipe_test.id}")
+  	expect(new_ingredient.recipes).to eq [recipe_test]
+  end 
+
+
 end
