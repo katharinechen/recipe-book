@@ -1,11 +1,15 @@
-<h1>List of all Ingredients</h1>
+<% content_for(:title, "Ingredient List | Recipe Book")%> 
+<% content_for(:heading, "Ingredients List") %> 
+<% content_for(:content, "Ingredients are used in my recipes. Click on recipes below each ingredients to see more specific instructions.") %> 
+
+<div class="container"> 
+	<p>There are currently recipes for <%= @ingredients.length %> ingredients. Enjoy! </p>
+	<% @ingredients.each do |ingredient| %>
+	    <h4><%= ingredient.name %></h4>
+	<% end %>
+
+</div> 
 
 
-<ul>
-  <% @ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
-  <% end %>
-</ul>
-
-<%= render('layouts/navbar') %>
+<!-- recipes has (portions(has ingredients)) -->
 
