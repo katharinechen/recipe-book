@@ -3,7 +3,7 @@ class Portion < ActiveRecord::Base
   validates :quantity, presence: true
   validates :unit_of_measurement, presence: true
 
-  has_one :ingredient
+  belongs_to :ingredient
   validates :ingredient_id, presence: true
 
   belongs_to :recipe

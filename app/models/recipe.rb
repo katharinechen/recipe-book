@@ -8,4 +8,11 @@ class Recipe < ActiveRecord::Base
   has_many :portions
   validates_associated :portions
 
+  has_many :ingredients, through: :portions 
+
 end
+
+
+
+
+
