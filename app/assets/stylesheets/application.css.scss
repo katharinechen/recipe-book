@@ -18,6 +18,18 @@ require_self*/
 @import "bootstrap-sprockets";
 @import 'bootstrap-custom';
  
+#special { 
+	background-image: url('steak1img.jpg');
+}
+
 .jumbotron { 
-	background-color: orange; 
+	background-image: url('vegimg.jpg');
 }  
+
+.jumbotron h1 { 
+	color: white ;
+}
+
+.jumbotron p { 
+	color: white;
+}
