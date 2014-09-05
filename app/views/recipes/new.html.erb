@@ -4,7 +4,7 @@
 
 <%= render('layouts/errors', :object => @recipe) %>
 
-<div class="container"> 
+<div class="container">
 
   <form action="/recipes/create" method="post" role="form">
 
@@ -15,37 +15,37 @@
     </div>
 
 <!--     Add Portions  -->
-    <div class="form-group"> 
-      <label for="portion_ingredient">Ingredient</label> 
-      <select class="form-control"> 
+    <div class="form-group">
+      <label for="portion_ingredient">Ingredient</label>
+      <select class="form-control">
         <% Ingredient.all.each do |ingredient| %>
           <option value="<%= ingredient.id %>" name="recipe[portion[ingredient_id]]"><%= ingredient.name %></option>
-        <% end %> 
+        <% end %>
       </select>
     </div>
 
 <!--     not sure why this is not working  -->
-    <input type="hidden" name="recipe[portion[recipe_id]]" value="<%= @recipe.id%>">
+<!--     <input type="hidden" name="recipe[portions_attributes[recipe_id]]" value="<%#= @recipe.id%>"> -->
 
     <div class="form-group">
       <label for="portion_quantity">Quantity</label>
-      <input type="integer" name="recipe[portion[quantity]]" class="form-control" placeholder="Ingredient Quantity">  
+      <input type="integer" name="recipe[portions_attributes[][quantity]]" class="form-control" placeholder="Ingredient Quantity">
     </div>
 
     <div class="form-group">
       <label for="portion_unit_of_measurement">Unit of Measurement</label>
-      <input type="text" name="recipe[portion[unit_of_measurement]]" class="form-control" placeholder="Unit of Measurement">  
+      <input type="text" name="recipe[portions_attributes[][unit_of_measurement]]" class="form-control" placeholder="Unit of Measurement">
     </div>
 
     <!-- Add Content  -->
     <div class="form-group">
       <label for="recipe_content">Instructions</label>
       <textarea id="recipe_content" name="recipe[content]" type="textarea" rows="12" cols="60" value="<%= @recipe.content %>" class="form-control" rows="3">Enter your instructions here </textarea>
-    </div> 
+    </div>
 
     <!-- button -->
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Save Recipe</button>
     </div>
   </form>
-</div> 
+</div>

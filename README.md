@@ -1,7 +1,10 @@
-RAILS BASIC ASSESSMENT 
+RAILS BASIC ASSESSMENT
 
-(1) deploy it to Heroku. 
-(3) Fix forms 
+(1) deploy it to Heroku.
+(3) Fix forms
+(4) fix margin for website -20
+(5) RESTFUL routes
+(6) nest recipes in users
 
 
 # Recipe Book
@@ -12,7 +15,15 @@ RAILS BASIC ASSESSMENT
 
 ##Setup
 
-Katharine does not have any recipes 
+Katharine does not have any recipes
+
+  rake db:create
+
+  rake db:migrate
+
+  rake db:seed
+
+  localhost:3000
 
 
 ##Ideal Functionality
