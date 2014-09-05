@@ -1,21 +1,22 @@
-<% content_for(:title, "#{@ingredient.name} | Recipe Book")%> 
-<% content_for(:heading, "#{@ingredient.name}") %> 
-<% content_for(:content, "There are a totaly of #{@ingredient.recipes.length} that uses #{@ingredient.name}.") %> 
+<% content_for(:title, "#{@ingredient.name} | Recipe Book")%>
+<% content_for(:heading, "#{@ingredient.name}") %>
+<% content_for(:content, "There are a total of #{@ingredient.recipes.length} recipes that uses #{@ingredient.name}.") %>
 
-<div class="container"> 
-	<p>There are a total of <b><%=@ingredient.recipes.length%></b>. For your convenience, the list of ingredients are sorted in alphabetical order.</p>
-	
+<div class="container">
+	<p>There are a total of <b><%=@ingredient.recipes.length%></b> recipes that uses <%= @ingredient.name %>. For your convenience, the list of ingredients are sorted in alphabetical order.</p>
+
 	<ul>
 		<% @ingredient.recipes.each do |recipe| %>
 		    <li><a href="/recipes/<%=recipe.id%>"><%= recipe.name %></a></li>
 		<% end %>
 	</ul>
+</br>
 
 	<p>Options</p>
 	<p><a href="/ingredients/<%= @ingredient.id %>/edit">Edit Ingredient</a></p>
-	<p><a href="/ingredients/<%= @ingredient.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Ingredient</a></p>
+	<p><a href="/ingredients/<%= @ingredient.id %>" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Ingredient</a></p>
 
-</div> 
+</div>
 
 
 

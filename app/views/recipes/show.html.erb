@@ -1,6 +1,6 @@
 <% content_for(:title, "#{@recipe.name} | Recipe Book") %>
 <% content_for(:heading, "#{@recipe.name}") %>
-<% content_for(:content, "The recipe for #{@recipe.name} is provided by #{@recipe.user.name}.")%>
+<% content_for(:content, "The recipe for #{@recipe.name} is created on #{@recipe.created_at}.")%>
 
 <div class="container">
 
@@ -8,10 +8,6 @@
 		<tr>
 			<td><b>Recipe</b></td>
 			<td><%=@recipe.name %></td>
-		</tr>
-		<tr>
-			<td><b>Contributor</b></td>
-			<td><%=@recipe.user.name %></td>
 		</tr>
 		<tr>
 			<td><b>Ingredients</b></td>
@@ -28,8 +24,8 @@
 		<tr>
 			<td><b>Options</b></td>
 			<td>
-				<li><p><a href="users/<%=@recipe.user.id %>/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p></li>
-				<li><p><a href="users/<%=@recipe.user.id %>/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p></li>
+				<li><p><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p></li>
+				<li><p><a href="/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p></li>
 			</td>
 		</tr>
 	</table>

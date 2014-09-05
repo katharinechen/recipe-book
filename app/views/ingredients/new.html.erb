@@ -1,15 +1,15 @@
-<% content_for(:title, "New Ingredient | Recipe Book") %> 
-<% content_for(:heading, "New Ingredient") %> 
-<% content_for(:content, "There are many ingredients in recipes. ") %> 
+<% content_for(:title, "New Ingredient | Recipe Book") %>
+<% content_for(:heading, "New Ingredient") %>
+<% content_for(:content, "There are many ingredients in recipes. ") %>
 
 
 <%= render('layouts/errors', :object => @ingredient) %>
 
-<div class="container"> 
+<div class="container">
 
 	<h3>Create New Ingredient</h3>
 
-	<form action="/ingredients/create" method="post">
+	<form action="/ingredients" method="post">
 		<div class="form-group">
 			<label for="ingredient_name" class="col-sm-2 control-label">Ingredient Name</label>
 	  		<input id="ingredient_name" name="ingredient[name]" type="text" value="<%= @ingredient.name %>">
@@ -20,7 +20,7 @@
 	      </div>
 	    </div>
 	</form>
-</div> 
+</div>
 
 
 

@@ -8,7 +8,6 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @ingredients = Ingredient.all
-    @users = User.all
     render('recipes/new.html.erb')
   end
 
@@ -36,7 +35,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     if @recipe.update(params[:recipe])
-      redirect_to("users/#{@recipe.user.id}/recipes/#{@recipe.id}")
+      redirect_to("/recipes/#{@recipe.id}")
     else
       render('recipes/edit.html.erb')
     end

@@ -6,7 +6,7 @@
 
 <div class="container">
 
-  <form action="/recipes/create" method="post" role="form">
+  <form action="/recipes" method="post" role="form">
 
     <!-- Add Names -->
     <div class="form-group">
@@ -14,7 +14,7 @@
       <input type="text" id="recipe_name" value="<%=@recipe.name%>" name="recipe[name]" class="form-control" placeholder="Recipe Name">
     </div>
 
-<!--     Add Portions  -->
+    <!--     Add Portions  -->
     <div class="form-group">
       <label for="portion_ingredient">Ingredient</label>
       <select class="form-control">
@@ -23,9 +23,6 @@
         <% end %>
       </select>
     </div>
-
-<!--     not sure why this is not working  -->
-<!--     <input type="hidden" name="recipe[portions_attributes[recipe_id]]" value="<%#= @recipe.id%>"> -->
 
     <div class="form-group">
       <label for="portion_quantity">Quantity</label>

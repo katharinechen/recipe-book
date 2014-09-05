@@ -9,7 +9,7 @@
 		<p> Here is a list of all of the recipes: </p>
 		<ul>
 	  		<% @recipes.each do |recipe| %>
-	    		<li><a href="users/<%=recipe.user.id %>/recipes/<%=recipe.id%>"><%= recipe.name %></a></li>
+	    		<li><a href="/recipes/<%=recipe.id%>"><%= recipe.name %></a></li>
 	  		<% end %>
 		</ul>
 	<% end %>
