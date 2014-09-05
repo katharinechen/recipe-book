@@ -15,8 +15,7 @@ class PortionController < ApplicationController
     end
   end
 
-
-  def delete
+  def destroy
     Portion.find(params[:id]).destroy
   end
 

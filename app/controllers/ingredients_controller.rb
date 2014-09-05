@@ -1,14 +1,8 @@
-class IngredientController < ApplicationController
+class IngredientsController < ApplicationController
 
-
-  def show
-    @ingredient = Ingredient.find(params[:id])
-    render('ingredients/show.html.erb')
-  end
-
-  def show_all
+  def index
     @ingredients = Ingredient.all
-    render('ingredients/show_all.html.erb')
+    render('ingredients/index.html.erb')
   end
 
   def new
@@ -26,6 +20,11 @@ class IngredientController < ApplicationController
     end
   end
 
+  def show
+    @ingredient = Ingredient.find(params[:id])
+    render('ingredients/show.html.erb')
+  end
+
   def edit
     @ingredient = Ingredient.find(params[:id])
     render('ingredients/edit.html.erb')
@@ -41,7 +40,7 @@ class IngredientController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @ingredient = Ingredient.find(params[:id])
     @ingredient.destroy
     redirect_to('/ingredients')

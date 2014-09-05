@@ -1,13 +1,8 @@
-class RecipeController < ApplicationController
+class RecipesController < ApplicationController
 
-  def show
-    @recipe = Recipe.find(params[:id])
-    render('recipes/show.html.erb')
-  end
-
-  def show_all
+  def index
     @recipes = Recipe.all
-    render('recipes/all.html.erb')
+    render('recipes/index.html.erb')
   end
 
   def new
@@ -27,6 +22,11 @@ class RecipeController < ApplicationController
     end
   end
 
+  def show
+    @recipe = Recipe.find(params[:id])
+    render('recipes/show.html.erb')
+  end
+
   def edit
     @recipe = Recipe.find(params[:id])
     render('recipes/edit.html.erb')
@@ -42,7 +42,7 @@ class RecipeController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     redirect_to('/recipes')
