@@ -3,11 +3,11 @@
 <% content_for(:content, "There are many ingredients in recipes. ") %> 
 
 
+<%= render('layouts/errors', :object => @ingredient) %>
+
 <div class="container"> 
 
 	<h3>Create New Ingredient</h3>
-
-	<%= render('layouts/errors', :object => @ingredient) %>
 
 	<form action="/ingredients/create" method="post">
 		<div class="form-group">

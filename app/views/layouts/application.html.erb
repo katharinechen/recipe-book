@@ -14,10 +14,10 @@
   <%= render('layouts/jumbo') %>
 <% end %>
 
+<%= yield %>
+
 <%= flash[:alert] %>
 <%= flash[:notice] %>
-
-<%= yield %>
 
 </body>
 </html>

@@ -2,13 +2,22 @@
 <% content_for(:heading, "@user.name") %>
 <% content_for(:content, "Wrong information? Fix it.") %>
 
-<p>Please change the information you like to edit:</p>
 
-<form action="/user/<%= @user.id %>" method="post">
-  <input name="_method" type="hidden" value="patch">
-  <label for="name">User Name: </label>
-  <input id="name" type="text" name="user[name]" class="form-control" value="<%=@user.name%>">
-  <button>Update User</button>
-</form>
+<%= render('layouts/errors', :object => @user) %>
+ 
+<div class="container"> 
+	<p>Please change the information you like to edit:</p>
 
+	<form action="/user/<%= @user.id %>" method="post" role="form">
+
+		<div class="form-group"> 
+		  <input name="_method" type="hidden" value="patch">
+		  <label for="name">User Name: </label>
+		  <input id="name" type="text" name="user[name]" class="form-control" value="<%=@user.name%>">
+		</div>
+		
+	  <button class="btn btn-default">Update User</button>
+
+	</form>
+</div> 
 
