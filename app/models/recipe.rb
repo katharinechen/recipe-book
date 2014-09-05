@@ -10,6 +10,8 @@ class Recipe < ActiveRecord::Base
 
   has_many :ingredients, through: :portions 
 
+  accepts_nested_attributes_for :portions 
+
 end
 
 

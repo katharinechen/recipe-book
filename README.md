@@ -1,11 +1,7 @@
 RAILS BASIC ASSESSMENT 
 
 (1) deploy it to Heroku. 
-(2) Are your parameters nested?
-(2) Do your forms display errors properly?
 (3) Fix forms 
-(1) Does the user see a flash message after successful form submissions?
-
 
 
 # Recipe Book
@@ -16,6 +12,7 @@ RAILS BASIC ASSESSMENT
 
 ##Setup
 
+Katharine does not have any recipes 
 
 
 ##Ideal Functionality
