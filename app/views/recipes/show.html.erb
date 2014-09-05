@@ -1,12 +1,18 @@
-<h1><%= @recipe.name %></h1>
+<% content_for(:title, "#{@recipe.name} | Recipe Book") %>
+<% content_for(:heading, "#{@recipe.name}") %>
+<% content_for(:content, "#The recipe for {@recipe.name} is provided by #{@recipe.user}") %>
 
-<p><%= @recipe.name %> has the following portions:</p>
+<div class="container"> 
+	<h1><%= @recipe.name %></h1>
 
-<ul>
-  <% # loop through all recipes using this ingredient here and put them in <li>s %>
-</ul>
+	<p><%= @recipe.name %> has the following portions:</p>
+
+	<ul>
+	  <% # loop through all recipes using this ingredient here and put them in <li>s %>
+	</ul>
 
 
-<p><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p>
-<p><a href="/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p>
-<%= render('/layouts/navbar') %>
+	<p><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p>
+	<p><a href="/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p>
+</div> 
+

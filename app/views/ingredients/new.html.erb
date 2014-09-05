@@ -4,14 +4,20 @@
 
 
 <div class="container"> 
-	<h1>Create New Ingredient</h1>
+
+	<h3>Create New Ingredient</h3>
 
 	<%= render('layouts/errors', :object => @ingredient) %>
 
 	<form action="/ingredients/create" method="post">
-	  <label for="ingredient_name">Ingredient Name</label>
-	  <input id="ingredient_name" name="ingredient[name]" type="text" value="<%= @ingredient.name %>">
-	  <button>CREATE</button>
+		<div class="form-group">
+			<label for="ingredient_name" class="col-sm-2 control-label">Ingredient Name</label>
+	  		<input id="ingredient_name" name="ingredient[name]" type="text" value="<%= @ingredient.name %>">
+		</div>
+	    <div class="form-group">
+	      <div class="col-sm-offset-2 col-sm-10">
+	        <button type="submit" class="btn btn-primary">Add Instructions</button>
+	      </div>
+	    </div>
 	</form>
-
 </div> 
