@@ -36,7 +36,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     if @recipe.update(params[:recipe])
-      redirect_to("/recipes/#{@recipe.id}")
+      redirect_to("users/#{@recipe.user.id}/recipes/#{@recipe.id}")
     else
       render('recipes/edit.html.erb')
     end

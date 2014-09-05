@@ -2,7 +2,7 @@
 <% content_for(:heading, "#{@recipe.name}") %>
 <% content_for(:content, "The recipe for #{@recipe.name} is provided by #{@recipe.user.name}.")%>
 
-<div class="container"> 
+<div class="container">
 
 	<table class="table table-hover">
 		<tr>
@@ -16,9 +16,9 @@
 		<tr>
 			<td><b>Ingredients</b></td>
 			<td>
-				<% @recipe.portions.all.each do |portion| %> 
+				<% @recipe.portions.all.each do |portion| %>
 					<li><%=portion.quantity%> <%=portion.unit_of_measurement %> <%=portion.ingredient.name %></li>
-				<% end %> 
+				<% end %>
 			</td>
 		</tr>
 		<tr>
@@ -28,10 +28,10 @@
 		<tr>
 			<td><b>Options</b></td>
 			<td>
-				<li><p><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p></li>
-				<li><p><a href="/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p></li>
+				<li><p><a href="users/<%=@recipe.user.id %>/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></p></li>
+				<li><p><a href="users/<%=@recipe.user.id %>/recipes/<%= @recipe.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Recipe</a></p></li>
 			</td>
 		</tr>
-	</table>	
-</div> 
+	</table>
+</div>
 
