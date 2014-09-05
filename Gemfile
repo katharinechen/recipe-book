@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
-gem 'sass-rails', '>= 3.2' 
+gem 'sass-rails', '>= 3.2'
 gem 'rails'
 gem 'pg'
 gem 'uglifier'
@@ -23,6 +23,10 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 
