@@ -32,7 +32,7 @@
 
 	Portion.create(ingredient_id: 1, quantity: 1, unit_of_measurement: "quart", recipe_id: 1)
 	Portion.create(ingredient_id: 2, quantity: 8, unit_of_measurement: "tablespoons", recipe_id: 1)
-	Portion.create(ingredient_id: 3, quantity: 0.5, unit_of_measurement: "cup", recipe_id: 1)
+	Portion.create(ingredient_id: 3, quantity: 1, unit_of_measurement: "half-cup", recipe_id: 1)
 	Portion.create(ingredient_id: 4, quantity: 2, unit_of_measurement: "tablespoons", recipe_id: 1)
 	Portion.create(ingredient_id: 5, quantity: 1, unit_of_measurement: "pound", recipe_id: 1)
 	Portion.create(ingredient_id: 6, quantity: 8, unit_of_measurement: "ounces", recipe_id: 1)

@@ -1,12 +1,30 @@
-<h1><%= @ingredient.name %></h1>
+<% content_for(:title, "#{@ingredient.name} | Recipe Book")%> 
+<% content_for(:heading, "#{@ingredient.name}") %> 
+<% content_for(:content, "There are a totaly of #{@ingredient.recipes.length} that uses #{@ingredient.name}.") %> 
 
-<p><%= @ingredient.name %> is used in the following recipes:</p>
+<div class="container"> 
+	<p>There are a total of <b><%=@ingredient.recipes.length%></b>. For your convenience, the list of ingredients are sorted in alphabetical order.</p>
+	
+	<ul>
+		<% @ingredient.recipes.each do |recipe| %>
+		    <li><a href="/recipes/<%=recipe.id%>"><%= recipe.name %></a></li>
+		<% end %>
+	</ul>
 
-<ul>
-  <% # loop through all recipes using this ingredient here and put them in <li>s %>
-</ul>
+	<p>Options</p>
+	<p><a href="/ingredients/<%= @ingredient.id %>/edit">Edit Ingredient</a></p>
+	<p><a href="/ingredients/<%= @ingredient.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Ingredient</a></p>
 
-<p><a href="/ingredients/<%= @ingredient.id %>/edit">Edit Ingredient</a></p>
-<p><a href="/ingredients/<%= @ingredient.id %>/delete" data-confirm="Delete - Are you sure?" data-method="delete" rel="nofollow">Delete Ingredient</a></p>
+</div> 
 
-<%= render('/layouts/navbar') %>
+
+
+
+
+
+
+
+
+
+
+

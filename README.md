@@ -18,18 +18,29 @@ RAILS BASIC ASSESSMENT
 (1) Build a Rails app with at least two models and deploy it to Heroku. Include CSS from Bootstrap or another theme.
 
 (2) Does your code continue to meet all of the standards from last week?
+
 (3) Are your routes RESTful?
+
 (4) Is there a route for the homepage?
-(5) Is your application logic in the models, and do controllers do as little work as possible?
-(6) Do you properly use render and redirect?
+
+(5) Is your application logic in the models, and do 
+controllers do as little work as possible?
+
+(6) Do you properly use render and redirect? 
+
 Are your parameters nested?
+
 (7) Do your forms display errors properly?
+
 (8) Does the user see a flash message after successful form submissions?
+
 (9) Is reused view code factored into partials?
 Does the app use the asset pipeline for CSS?
 
 
 
+
+--RAKE DB:SEED (run seed file)
 
 
 <div class="field">
