@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @ingredients = Ingredient.all
+    3.times { @recipe.portions.build }
     render('recipes/new.html.erb')
   end
 

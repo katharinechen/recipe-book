@@ -3,7 +3,7 @@ class Recipe < ActiveRecord::Base
   validates :content, presence: true
 
   has_many :portions
-  validates_associated :portions
+  # validates_associated :portions
 
   has_many :ingredients, through: :portions
 

@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   match('/recipes/:id', :via => [:patch, :put], :to => 'recipes#update')
   match('/recipes/:id', :via => :delete, :to => 'recipes#destroy')
 
+  match('/recipes/new', :via => :get, :to => 'portions#new')
+  match('/recipes', :via => :post, :to => 'portions#create')
+  match('/recipes/:id', :via => :delete, :to => 'portions#destroy')
+
 end

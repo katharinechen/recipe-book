@@ -17,9 +17,9 @@
     <!--     Add Portions  -->
     <div class="form-group">
       <label for="portion_ingredient">Ingredient</label>
-      <select class="form-control">
+      <select class="form-control" name="recipe[portions_attributes[][ingredient_id]]">
         <% Ingredient.all.each do |ingredient| %>
-          <option value="<%= ingredient.id %>" name="recipe[portion[ingredient_id]]"><%= ingredient.name %></option>
+          <option value="<%=ingredient.id %>"><%= ingredient.name %></option>
         <% end %>
       </select>
     </div>
