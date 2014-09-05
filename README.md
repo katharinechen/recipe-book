@@ -16,3 +16,7 @@
   rake db:seed
 
   localhost:3000
+
+## Heroku
+
+  http://recipebook1.herokuapp.com/
