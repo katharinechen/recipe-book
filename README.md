@@ -1,22 +1,42 @@
-# Recipe Book
+=Recipe Book
 
-##Current Functionality
+==About
+This project was completed by Katharine Chen for Epicodus' Basic Rail Assessment.
 
-  * Users can add new recipes and ingredients.
-  * Users can search recipes by ingredients
+==Description
+This project is to built a simple application to take recipes.
+
+==Heroku
+To view this site,visit:
+
+    http://recipebook1.herokuapp.com/
+
+==Functionality
+
+* Users can add new recipes and ingredients.
+* Users can search recipes by ingredients
 
   The form is not working. It is not accepting nested attributues. Dustin said to just send it in!
 
-##Setup
+==Installation
+Clone the repository:
 
-  rake db:create
+    git clone https://github.com/katharinechen/learnhowtoprogramwebsite-.git
 
-  rake db:migrate
+Download all of the necessary Gems.
 
-  rake db:seed
+    bundle
+    bundle update
 
-  localhost:3000
+Setup the appropriate databases by entering the following in your terminal:
 
-## Heroku
+    rake db:create
+    rake db:migrate
+    rake db:seed
 
-  http://recipebook1.herokuapp.com/
+To view the site, enter localhost:3000 in your browser:
+
+    localhost:3000
+
+==License
+MIT

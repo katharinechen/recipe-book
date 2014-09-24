@@ -32,7 +32,6 @@ class IngredientsController < ApplicationController
 
   def update
     @ingredient = Ingredient.find(params[:id])
-
     if @ingredient.update(params[:ingredient])
       redirect_to("/ingredients/#{@ingredient.id}")
     else

@@ -16,6 +16,4 @@ describe Ingredient do
   	new_portion1 = Portion.create(ingredient_id: "#{new_ingredient.id}", quantity: 1, unit_of_measurement: "g", recipe_id: "#{recipe_test.id}")
   	expect(new_ingredient.recipes).to eq [recipe_test]
   end
-
-
 end
