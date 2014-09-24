@@ -1,24 +1,24 @@
-=Recipe Book
+#Recipe Book
 
-==About
+##About
 This project was completed by Katharine Chen for Epicodus' Basic Rail Assessment.
 
-==Description
+##Description
 This project is to built a simple application to take recipes.
 
-==Heroku
+##Heroku
 To view this site,visit:
 
     http://recipebook1.herokuapp.com/
 
-==Functionality
+##Functionality
 
 * Users can add new recipes and ingredients.
 * Users can search recipes by ingredients
 
   The form is not working. It is not accepting nested attributues. Dustin said to just send it in!
 
-==Installation
+##Installation
 Clone the repository:
 
     git clone https://github.com/katharinechen/learnhowtoprogramwebsite-.git
@@ -38,5 +38,5 @@ To view the site, enter localhost:3000 in your browser:
 
     localhost:3000
 
-==License
+##License
 MIT
